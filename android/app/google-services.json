@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "543556718444",
+    "project_id": "foode-7ac20",
+    "storage_bucket": "foode-7ac20.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543556718444:android:d60913d8388fa9c2662d49",
+        "android_client_info": {
+          "package_name": "com.foode_delivery.foode_delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE3qeoNWI7BDzQtNvbKps0DFzgRzhXy3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
