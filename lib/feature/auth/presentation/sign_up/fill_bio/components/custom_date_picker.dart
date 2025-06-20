@@ -41,7 +41,6 @@ class _CustomDatePickerState extends State<CustomDatePicker> {
                 initialDate: selectedDate ?? now,
                 firstDate: DateTime(2000),
                 lastDate: DateTime(now.year + 10),
-
                 builder: (context, child) {
                   return Theme(
                     data: Theme.of(context).copyWith(

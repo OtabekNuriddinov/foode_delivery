@@ -108,9 +108,9 @@ class _CongratsScreenState extends State<CongratsScreen> with SingleTickerProvid
                   child: MainButton(
                       color1: AppColors.pink,
                       color2: AppColors.darkPink,
-                      text: "Go homepage",
+                      text: "Go to Sign In",
                       onPressed: (){
-                        context.go('/home');
+                        context.go('/sign-in');
                       },
                   ),
                 )

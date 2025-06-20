@@ -69,16 +69,8 @@ class _FillBioScreenState extends State<FillBioScreen> {
   Widget build(BuildContext context) {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
-        if (state is AuthLoading) {
-          showDialog(
-            context: context,
-            barrierDismissible: false,
-            builder: (context) => const Center(
-              child: CircularProgressIndicator(),
-            ),
-          );
-        } else if (state is AuthSignUpStep2Success) {
-          Navigator.pop(context); // Close loading
+          if (state is AuthSignUpStep2Success) {
+          Navigator.pop(context);
           context.go('/sign-up/fill-in-bio/${widget.userId}/payment-method');
         }
       },

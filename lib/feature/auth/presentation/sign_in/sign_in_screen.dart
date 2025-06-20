@@ -61,7 +61,7 @@ class _SignInScreenState extends State<SignInScreen> {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is AuthLoading) {
-          print("⏳ Auth Loading state received");
+          print("Auth Loading state received");
         }
         else if (state is AuthSignInSuccess) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -75,7 +75,7 @@ class _SignInScreenState extends State<SignInScreen> {
         else if (state is AuthFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text(state.message),
+              content: Text("User is not registered!"),
               backgroundColor: Colors.red,
             ),
           );

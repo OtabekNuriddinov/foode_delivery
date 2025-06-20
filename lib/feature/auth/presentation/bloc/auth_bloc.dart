@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:foode_delivery/feature/auth/data/models/location_model.dart';
 import 'package:foode_delivery/feature/auth/data/repositories/auth_repository_impl.dart';
 import '../../data/models/user_model.dart';
