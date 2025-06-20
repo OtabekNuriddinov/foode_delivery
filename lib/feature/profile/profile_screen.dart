@@ -32,12 +32,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     final state = context.watch<AuthBloc>().state;
+    final currentUser = FirebaseAuth.instance.currentUser;
+
     String? fullName;
     String? email;
+
     if (state is AuthSignInSuccess) {
       fullName = state.user.fullName;
       email = state.user.email;
     }
+
+    if (email == null || email.isEmpty) {
+      if (currentUser != null) {
+        email = currentUser.email;
+      }
+    }
+    if (fullName == null || fullName.isEmpty) {
+      if (currentUser != null) {
+        fullName = currentUser.displayName ?? currentUser.email?.split('@')[0];
+      }
+    }
+
     return Stack(
       children: [
         SizedBox(
